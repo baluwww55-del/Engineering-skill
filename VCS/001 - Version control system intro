@@ -1,0 +1,143 @@
+# Day 01 — Git & Version Control System
+
+## 1. Version Control System (VCS)
+
+A **Version Control System (VCS)** is a software tool used to track and manage changes made to files and source code.
+
+### Main purposes of VCS
+
+- Track changes in source code.
+- Maintain different versions of a project.
+- View the history of changes.
+- Restore previous versions when required.
+- Allow multiple developers to work on the same project.
+- Maintain a reliable history of the project.
+
+
+## 2. Types of Version Control Systems
+
+There are two major types:
+
+1. Centralized Version Control System (CVCS)
+2. Distributed Version Control System (DVCS)
+
+
+## 3. Centralized Version Control System (CVCS)
+
+In a centralized VCS, the main copy of the project is stored on a **central server**.
+
+Developers connect to the server to access and update the project.
+
+### Architecture
+
+Developer 1 ──┐  
+Developer 2 ──┼──> Central Server  
+Developer 3 ──┘
+
+### Examples
+
+- SVN
+- CVS
+- Perforce
+
+### Advantages
+
+- Centralized management.
+- Easy to control access.
+- One central location for the project.
+
+### Disadvantages
+
+- Strong dependency on the central server.
+- Network/server failure can affect development.
+- Developers generally do not have the complete repository history locally.
+
+
+## 4. Distributed Version Control System (DVCS)
+
+In a distributed VCS, every developer has a **local repository** containing the project and its history.
+
+A remote repository can be used for collaboration and synchronization.
+
+### Architecture
+
+Developer 1 → Local Repository ──┐  
+Developer 2 → Local Repository ──┼──> Remote Repository  
+Developer 3 → Local Repository ──┘
+
+### Examples
+
+- Git
+- Mercurial
+
+### Advantages
+
+- Developers can work offline.
+- Most Git operations work locally.
+- Complete project history is available locally.
+- Multiple developers can work independently.
+- Changes can be synchronized with a remote repository.
+
+
+# 5. What is Git?
+
+**Git** is a distributed version control system used to track changes in source code and other files.
+
+Git helps developers:
+
+- Track changes.
+- Maintain project history.
+- Create versions of a project.
+- Work on different features.
+- Collaborate with other developers.
+- Revert unwanted changes.
+- Synchronize code between local and remote repositories.
+
+Git was originally created by **Linus Torvalds**.
+
+
+# 6. Git vs GitHub
+
+Git and GitHub are different.
+
+### Git
+
+Git is the **version control software** that runs on your computer.
+
+It manages:
+
+- Files
+- Changes
+- Commits
+- Branches
+- Repository history
+
+### GitHub
+
+GitHub is a **platform for hosting Git repositories** and collaborating with other developers.
+
+### Simple difference
+
+Git → Version Control System  
+GitHub → Hosting + Collaboration Platform
+
+Other Git hosting platforms include:
+
+- GitLab
+- Bitbucket
+
+
+# 7. Git Repository
+
+A **repository (repo)** is a location where Git stores project files and their version history.
+
+There are two important types:
+
+### Local Repository
+
+A repository stored on your own computer.
+
+```text
+Computer
+└── Project
+    └── .git
