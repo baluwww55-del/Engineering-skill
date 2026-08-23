@@ -1,0 +1,97 @@
+# Git & GitHub Workflow — Day 1
+
+## Git
+Git is a Distributed Version Control System (DVCS) used to track changes in source code and manage different versions of a project.
+
+## Git Architecture
+
+Working Directory → Staging Area → Local Repository → Remote Repository
+
+Working Directory:
+- Contains the files/folders of our project.
+- Modified and new files are present here.
+
+Staging Area:
+- Contains files selected for the next commit.
+- Command: `git add .`
+
+Local Repository:
+- Stores committed changes on our local machine.
+- Command: `git commit -m "message"`
+
+Remote Repository:
+- Repository stored on GitHub.
+- Command: `git push`
+
+## Basic Workflow
+
+1. Create/modify files in Working Directory.
+2. `git add .` → move changes to Staging Area.
+3. `git commit -m "message"` → save changes in Local Repository.
+4. `git push` → upload commits to GitHub.
+
+## Clone
+
+`git clone <repository-url>`
+
+Clone is used to copy a complete GitHub repository to our local machine.
+
+## Pull
+
+`git pull`
+
+Gets the latest changes from the remote GitHub repository to the local repository.
+
+## Branching
+
+A branch is an independent line of development.
+
+Example:
+`main → feature-branch`
+
+Branches allow multiple developers to work on different features without directly affecting the main branch.
+
+## Pull Request
+
+After completing a feature:
+
+Branch → Push → Pull Request → Code Review → Merge → Main
+
+## Merge Conflict
+
+A merge conflict happens when Git cannot automatically combine changes made by different developers, usually when they modify the same part of a file.
+
+## Important Commands
+
+`git init` → Initialize Git repository
+`git status` → Check repository status
+`git add .` → Stage changes
+`git commit -m "message"` → Commit changes
+`git clone <url>` → Clone repository
+`git push` → Send changes to GitHub
+`git pull` → Get latest changes
+`git branch` → View/manage branches
+`git switch <branch>` → Switch branch
+`git merge <branch>` → Merge a branch
+
+## Main GitHub Workflow
+
+Working Directory
+↓
+git add
+↓
+Staging Area
+↓
+git commit
+↓
+Local Repository
+↓
+git push
+↓
+GitHub Remote Repository
+↓
+Pull Request
+↓
+Code Review
+↓
+Merge
