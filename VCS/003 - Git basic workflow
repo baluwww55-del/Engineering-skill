@@ -1,0 +1,66 @@
+Git Basic Workflow
+
+Today I learned the basic Git workflow and how Git tracks changes in a project.
+
+## What is Git?
+
+Git is a Version Control System (VCS) used to track changes in source code and manage different versions of a project.
+
+## 1. Git Init
+
+Creates a new Git repository in the current project.
+
+```bash
+git init
+2. Git Status
+Shows the current state of files in the working directory.
+git status
+It shows modified, untracked, and staged files.
+3. Git Add
+Moves files from the working directory to the staging area.
+Add a specific file:
+git add filename
+Add all files:
+git add .
+4. Git Commit
+Saves the staged changes as a commit in the local repository.
+git commit -m "Initial commit"
+The commit message describes what changes were made.
+5. Git Config
+Used to configure the Git username and email.
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+Check configuration:
+git config --list
+6. Git Log
+Shows the history of commits.
+git log
+It displays the commit ID, author, date, and commit message.
+Basic Git Workflow
+Working Directory
+       ↓
+   git add
+       ↓
+Staging Area
+       ↓
+  git commit
+       ↓
+Local Repository
+Commands Learned Today
+git init
+git status
+git add .
+git commit -m "message"
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git log
+Quick Revision
+init   → Initialize repository
+status → Check file status
+add    → Stage changes
+commit → Save changes
+config → Configure Git
+log    → View commit history
+Basic Flow
+git init → git status → git add → git commit → git log
+This is the basic Git workflow I learned toda
