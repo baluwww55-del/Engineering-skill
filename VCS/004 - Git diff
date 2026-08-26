@@ -1,0 +1,54 @@
+## 1. Git Diff
+
+`git diff` is used to see the differences between files.
+
+```bash
+git diff
+It shows changes made in the working directory that are not yet staged.
+2. Git Diff After Staging
+After adding a file:
+git add index.txt
+The file moves to the staging area.
+To see staged changes:
+git diff --staged
+or
+git diff --cached
+3. Compare Working Directory with Last Commit
+git diff HEAD
+This shows differences between the current working directory/staging state and the latest commit.
+4. Compare a Specific File
+git diff index.txt
+Used to see changes made to a specific file in the working directory.
+5. Compare a File with HEAD
+git diff HEAD -- index.txt
+Shows the difference between the current version of the file and the latest committed version.
+6. Compare Two Commits
+git diff commit1 commit2
+Used to see the differences between two specific commits.
+7. Compare Two Branches
+git diff main test
+Used to compare the differences between two branches.
+8. Git Diff Check
+git diff --check
+Checks for common whitespace errors in the changes.
+Git Change Flow
+Working Directory
+       ↓
+    git diff
+       ↓
+Staging Area
+       ↓
+git diff --staged
+       ↓
+Local Repository
+       ↓
+Compare with commits / branches
+Quick Revision
+git diff               → Working directory changes
+git diff --staged      → Staged changes
+git diff --cached      → Staged changes
+git diff HEAD          → Compare with latest commit
+git diff HEAD -- file  → Compare specific file with HEAD
+git diff commit1 commit2 → Compare two commits
+git diff main test     → Compare two branches
+git diff --check       → Check whitespace errors
