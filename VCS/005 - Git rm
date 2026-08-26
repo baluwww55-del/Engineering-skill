@@ -1,0 +1,438 @@
+# Git Notes — What I Learned Today
+
+## 1. Git Basic Workflow
+
+Git mainly works with these areas:
+
+```text
+Working Directory
+       ↓
+   git add
+       ↓
+  Staging Area
+       ↓
+ git commit
+       ↓
+ Local Repository
+```
+
+---
+
+## 2. Initialize a Git Repository
+
+Create a Git repository in the current directory:
+
+```bash
+git init
+```
+
+---
+
+## 3. Check Repository Status
+
+To see the current status of files:
+
+```bash
+git status
+```
+
+It shows whether files are:
+
+- Untracked
+- Modified
+- Staged
+- Ready to commit
+
+---
+
+## 4. Add Files to Staging Area
+
+Add a specific file:
+
+```bash
+git add index.txt
+```
+
+Add all files:
+
+```bash
+git add .
+```
+
+The `.` means all changes in the current directory.
+
+---
+
+## 5. Commit Changes
+
+Create a commit:
+
+```bash
+git commit -m "3 files committing in first round"
+```
+
+The `-m` option is used to provide the commit message.
+
+Example:
+
+```bash
+git commit -m "Initial commit"
+```
+
+---
+
+# Git Diff Commands
+
+## 6. `git diff`
+
+To see the difference between:
+
+```text
+Working Directory ↔ Staging Area
+```
+
+use:
+
+```bash
+git diff
+```
+
+This shows changes that have been made but are **not yet staged**.
+
+---
+
+## 7. `git diff --cached`
+
+To see the difference between:
+
+```text
+Staging Area ↔ Last Commit
+```
+
+use:
+
+```bash
+git diff --cached
+```
+
+You can also use:
+
+```bash
+git diff --staged
+```
+
+Both are used to view staged changes.
+
+---
+
+## 8. Compare Working Directory with Last Commit
+
+To compare the current working directory with the latest commit:
+
+```bash
+git diff HEAD
+```
+
+For a specific file:
+
+```bash
+git diff HEAD -- index.txt
+```
+
+This compares:
+
+```text
+Working Directory + Staging Area
+              ↕
+            HEAD
+```
+
+---
+
+## 9. Compare Staged Changes with Last Commit
+
+To compare the staging area with the latest commit:
+
+```bash
+git diff --cached HEAD
+```
+
+For a specific file:
+
+```bash
+git diff --cached HEAD -- index.txt
+```
+
+---
+
+# Comparing Commits
+
+## 10. Compare Two Commits
+
+To see the difference between two specific commits:
+
+```bash
+git diff commit1 commit2
+```
+
+Example:
+
+```bash
+git diff abc123 def456
+```
+
+---
+
+## 11. Compare Two Branches
+
+To see the difference between two branches:
+
+```bash
+git diff master test
+```
+
+This compares the `master` branch with the `test` branch.
+
+---
+
+## 12. Compare Local and Remote Branches
+
+To compare a local branch with a remote branch:
+
+```bash
+git diff master origin/master
+```
+
+---
+
+# Git Log
+
+## 13. View Commit History
+
+To see the commit history:
+
+```bash
+git log
+```
+
+For a short one-line version:
+
+```bash
+git log --oneline
+```
+
+This gives a compact list of commits and their commit IDs.
+
+---
+
+# Removing Files
+
+## 14. Delete a File from Working Directory
+
+Normal Linux command:
+
+```bash
+rm index.txt
+```
+
+After deleting the file, Git will show the deletion when you run:
+
+```bash
+git status
+```
+
+---
+
+## 15. Remove a File Using Git
+
+To remove a file from the working directory and stage the deletion:
+
+```bash
+git rm index.txt
+```
+
+Then commit the change:
+
+```bash
+git commit -m "Remove index.txt"
+```
+
+---
+
+## 16. Remove a File Only from Staging
+
+If you want to remove a file from the staging area but keep the file in your working directory:
+
+```bash
+git rm --cached index.txt
+```
+
+Then check:
+
+```bash
+git status
+```
+
+The file remains on your computer but is no longer tracked/staged by Git.
+
+---
+
+# Checking Tracked Files
+
+## 17. View Files Tracked by Git
+
+To see the files currently tracked by Git:
+
+```bash
+git ls-files
+```
+
+---
+
+# Working with Staging Area
+
+## 18. Check Staged Files
+
+Use:
+
+```bash
+git status
+```
+
+Example workflow:
+
+```bash
+git add .
+git status
+git commit -m "Add files"
+```
+
+---
+
+# File States in Git
+
+A file generally moves through these stages:
+
+```text
+Untracked
+    ↓
+git add
+    ↓
+Staged
+    ↓
+git commit
+    ↓
+Committed
+```
+
+If a tracked file is modified:
+
+```text
+Committed
+    ↓
+File modified
+    ↓
+Working Directory
+    ↓
+git add
+    ↓
+Staging Area
+    ↓
+git commit
+    ↓
+Repository
+```
+
+---
+
+# Important Difference Between Git Diff Commands
+
+| Command | What it compares |
+|---|---|
+| `git diff` | Working Directory ↔ Staging Area |
+| `git diff --cached` | Staging Area ↔ Last Commit |
+| `git diff --staged` | Staging Area ↔ Last Commit |
+| `git diff HEAD` | Working Directory + Staging Area ↔ Last Commit |
+| `git diff --cached HEAD` | Staging Area ↔ Last Commit |
+| `git diff commit1 commit2` | Two commits |
+| `git diff master test` | Two branches |
+| `git diff master origin/master` | Local branch ↔ Remote branch |
+
+---
+
+# Basic Git Workflow — Quick Revision
+
+```bash
+# Create repository
+git init
+
+# Check status
+git status
+
+# Add a file
+git add index.txt
+
+# Add all files
+git add .
+
+# Check staged changes
+git diff --cached
+
+# Commit
+git commit -m "Initial commit"
+
+# View commit history
+git log --oneline
+
+# Check unstaged changes
+git diff
+
+# Compare with latest commit
+git diff HEAD
+
+# Remove a file
+git rm index.txt
+
+# Remove file from Git but keep it locally
+git rm --cached index.txt
+
+# See tracked files
+git ls-files
+```
+
+---
+
+# Git Mental Model
+
+```text
+             git add
+Working -----------------> Staging
+   |                         |
+   |                         |
+   |                         | git commit
+   |                         ↓
+   |                      Repository
+   |
+   | git diff
+   ↓
+Changes
+```
+
+**Remember:**
+
+```text
+git diff
+    → What changed but is NOT staged?
+
+git diff --cached
+    → What is staged but NOT committed?
+
+git diff HEAD
+    → What is different from the last commit?
+
+git status
+    → What is the current state of my repository?
+
+git log --oneline
+    → What commits have I made?
+```
