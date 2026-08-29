@@ -1,0 +1,161 @@
+# Git Checkout
+
+## `git checkout`
+
+The `git checkout` command can be used to discard changes in tracked files in the working directory.
+
+### Basic syntax
+
+```bash
+git checkout <file-name>
+```
+
+Example:
+
+```bash
+git checkout index.txt
+```
+
+---
+
+## Working Directory → Staging Area → Local Repository
+
+Git works with different areas:
+
+```text
+Working Directory
+       |
+       | git add
+       ↓
+Staging Area
+       |
+       | git commit
+       ↓
+Local Repository
+```
+
+When a tracked file is modified in the working directory, Git can restore its previous version using the `git checkout` command.
+
+---
+
+## Discarding Unstaged Changes
+
+Suppose you have a tracked file:
+
+```text
+index.txt
+```
+
+You make some changes to it:
+
+```text
+Modified file
+```
+
+But you have not staged those changes yet.
+
+You can discard those unstaged changes using:
+
+```bash
+git checkout index.txt
+```
+
+This restores the file to its previous version.
+
+---
+
+## Important Point
+
+`git checkout` is used for **tracked files**.
+
+It is **not applicable to untracked files**.
+
+Example of an untracked file:
+
+```text
+newfile.txt
+```
+
+If Git has never tracked the file, `git checkout` cannot restore it because Git has no previous version stored for that file.
+
+---
+
+## Example
+
+Check the status:
+
+```bash
+git status
+```
+
+Suppose:
+
+```text
+modified: index.txt
+```
+
+To discard the unstaged changes:
+
+```bash
+git checkout index.txt
+```
+
+Then check again:
+
+```bash
+git status
+```
+
+The changes made to `index.txt` will be removed.
+
+---
+
+## Important Warning ⚠️
+
+Using:
+
+```bash
+git checkout <file-name>
+```
+
+can permanently discard your unstaged changes.
+
+So make sure you really do not need those changes before running the command.
+
+---
+
+## Quick Summary
+
+```text
+Tracked file
+     ↓
+Modified in Working Directory
+     ↓
+Unstaged Changes
+     ↓
+git checkout <file-name>
+     ↓
+Changes are discarded
+     ↓
+File restored to previous version
+```
+
+### Command
+
+```bash
+git checkout <file-name>
+```
+
+### Example
+
+```bash
+git checkout index.txt
+```
+
+### Remember
+
+- Works with tracked files
+- Discards unstaged changes
+- Restores the previous version of the file
+- Does not work for untracked files
+- Be careful because discarded changes can be lost
