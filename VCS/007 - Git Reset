@@ -1,0 +1,290 @@
+
+
+
+
+1. GIT CHECKOUT
+
+git checkout command is used to move between branches
+or to check/view a previous version of files.
+
+Example:
+
+git checkout branch-name
+
+Example:
+
+git checkout main
+
+
+
+
+
+-------------------------
+2. WORKING DIRECTORY
+-------------------------
+
+The Working Directory is the place where we create,
+edit, modify, and delete our project files.
+
+Example:
+
+file.txt → edited
+
+Any changes made to files are first present in the
+Working Directory.
+
+To check the current status of files:
+
+git status
+
+
+
+
+
+-------------------------
+3. STAGING AREA
+-------------------------
+
+The Staging Area is the intermediate area between the
+Working Directory and the Local Repository.
+
+We use the Staging Area to select which changes we want
+to save in the next commit.
+
+To move changes from Working Directory to Staging Area:
+
+git add file.txt
+
+To add all files:
+
+git add .
+
+
+FLOW:
+
+Working Directory
+        |
+        | git add
+        ↓
+Staging Area
+
+
+
+
+
+-------------------------
+4. LOCAL REPOSITORY
+-------------------------
+
+The Local Repository stores the commits that we create.
+
+After adding changes to the Staging Area, we save them
+permanently by creating a commit.
+
+Command:
+
+git commit -m "message"
+
+
+FLOW:
+
+Working Directory
+        |
+        | git add
+        ↓
+Staging Area
+        |
+        | git commit
+        ↓
+Local Repository
+
+
+GIT RESET :
+
+
+git reset command is used to undo changes or move back
+to a previous commit.
+
+There are mainly 3 types of git reset:
+
+1. git reset --soft
+2. git reset --mixed
+3. git reset --hard
+
+
+
+
+
+1. GIT RESET --SOFT
+
+Command:
+
+git reset --soft HEAD~1
+
+This removes the previous/latest commit.
+
+But:
+
+✓ Changes remain in the Staging Area
+✓ Changes remain in the Working Directory
+
+It only moves the commit backward.
+
+Example:
+
+Before:
+
+Working Directory → Staging Area → Local Repository
+                                      Commit
+
+
+After git reset --soft HEAD~1:
+
+Working Directory → Staging Area
+       ✓                 ✓
+
+The commit is removed, but changes are still staged.
+
+
+
+
+
+2. GIT RESET --MIXED
+
+Command:
+
+git reset --mixed HEAD~1
+
+OR:
+
+git reset HEAD~1
+
+(--mixed is the default mode)
+
+This removes the latest commit and also removes the
+changes from the Staging Area.
+
+But:
+
+✓ Changes remain in the Working Directory
+✗ Changes are removed from Staging Area
+✗ Commit is removed
+
+
+Example:
+
+Before:
+
+Working Directory → Staging Area → Local Repository
+
+
+After git reset HEAD~1:
+
+Working Directory
+       ✓
+
+Staging Area
+       ✗
+
+Commit
+       ✗
+
+
+
+
+
+3. GIT RESET --HARD
+
+Command:
+
+git reset --hard HEAD~1
+
+This removes everything after the selected commit.
+
+✗ Commit is removed
+✗ Staging Area changes are removed
+✗ Working Directory changes are removed
+
+
+WARNING:
+
+git reset --hard can delete changes permanently.
+
+
+
+
+
+RESET COMPARISON
+
+
+
+git reset --soft
+
+Commit          → Removed
+Staging Area    → Changes remain
+Working Files   → Changes remain
+
+
+git reset --mixed
+
+Commit          → Removed
+Staging Area    → Changes removed
+Working Files   → Changes remain
+
+
+git reset --hard
+
+Commit          → Removed
+Staging Area    → Changes removed
+Working Files   → Changes removed
+
+
+IMPORTANT FLOW
+
+
+
+        WORKING DIRECTORY
+               |
+               | git add
+               ↓
+          STAGING AREA
+               |
+               | git commit
+               ↓
+        LOCAL REPOSITORY
+
+
+====================================================
+              QUICK REVISION
+====================================================
+
+git status
+→ Shows the status of files
+
+
+git add file.txt
+→ Adds a file to the Staging Area
+
+
+git add .
+→ Adds all files to the Staging Area
+
+
+git commit -m "message"
+→ Saves staged changes as a commit
+
+
+git checkout branch-name
+→ Switches to another branch
+
+
+git reset --soft HEAD~1
+→ Undo commit, keep staged changes
+
+
+git reset HEAD~1
+→ Undo commit, keep file changes
+
+
+git reset --hard HEAD~1
+→ Undo everythhing
