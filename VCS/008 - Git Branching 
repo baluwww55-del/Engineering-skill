@@ -1,0 +1,128 @@
+
+       GIT BRANCHING
+
+What is a Branch?
+
+A branch is an isolated line of development in Git.
+
+It allows us to work on new features or make changes without affecting
+the main branch.
+
+By default, Git creates a main branch (previously often called master).
+
+Example:
+
+main
+ |
+ |------ feature1
+ |
+ |------ feature2
+
+
+MAIN / MASTER BRANCH
+
+The main branch contains the main source code of the project.
+
+Changes made directly in the main branch affect the main project.
+
+
+FEATURE BRANCH
+
+A feature branch is created to work on a specific feature separately.
+
+Example:
+
+main
+  |
+  |------ feature-login
+
+You can work on the login feature without affecting the main branch.
+
+Changes made in a feature branch will not affect the main branch
+until the branch is merged.
+
+
+IMPORTANT:
+
+✓ Every branch is isolated.
+
+✓ Changes in one branch do not automatically affect another branch.
+
+✓ A branch is useful for working on new features safely.
+
+✓ After completing the work, branches can be merged.
+
+
+========================
+       GIT COMMANDS
+========================
+
+1. View available branches:
+
+git branch
+
+
+2. Create a new branch:
+
+git branch branch-name
+
+Example:
+
+git branch feature-login
+
+
+3. Switch to another branch:
+
+git switch branch-name
+
+Example:
+
+git switch feature-login
+
+
+Older method:
+
+git checkout branch-name
+
+Example:
+
+git checkout feature-login
+
+
+4. Create and switch to a branch:
+
+git checkout -b branch-name
+
+Example:
+
+git checkout -b feature-login
+
+
+========================
+        EXAMPLE
+========================
+
+First, check branches:
+
+git branch
+
+Create a new branch:
+
+git branch feature1
+
+Switch to that branch:
+
+git switch feature1
+
+Now make changes and commit them.
+
+These changes will remain in feature1 and will not affect
+the main branch until they are merged.
+
+
+MAIN IDEA:
+
+Branch = Separate workspace for development.
+
+Git branching helps developers work on different features safely
+without disturbing the main project.
