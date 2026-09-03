@@ -1,0 +1,154 @@
+========================
+     GIT MERGING
+========================
+
+What is Git Merge?
+
+Git merge is used to combine changes from one branch
+into another branch.
+
+Usually, we merge a feature branch into the main branch.
+
+Example:
+
+main
+  |
+  |------ feature-login
+
+After merging:
+
+main
+  |
+  |------ feature-login changes
+
+
+========================
+   TWO TYPES OF MERGE
+========================
+
+1. FAST-FORWARD MERGE
+
+A fast-forward merge happens when the main branch has
+not changed after the new branch was created.
+
+Git simply moves the main branch pointer forward.
+
+Example:
+
+main ---- A ---- B
+
+                 \
+feature ---------- C
+
+After merge:
+
+main ---- A ---- B ---- C
+
+No separate merge commit is usually needed.
+
+
+2. THREE-WAY MERGE
+
+A three-way merge happens when both branches have
+their own changes.
+
+Git combines the changes from both branches.
+
+Example:
+
+        --- feature changes
+       /
+main --
+       \
+        --- main changes
+
+Git creates a new merge commit to combine them.
+
+
+========================
+      MERGE CONFLICT
+========================
+
+A merge conflict happens when Git cannot automatically
+decide how to combine changes.
+
+Example:
+
+Two branches change the same line of the same file.
+
+Git will stop the merge and ask the developer to fix it.
+
+Steps:
+
+1. Open the conflicting file.
+2. Decide which changes to keep.
+3. Remove the conflict markers.
+4. Save the file.
+5. Add and commit the changes.
+
+
+========================
+     MERGE COMMAND
+========================
+
+First switch to the branch where you want
+the changes to go.
+
+Example:
+
+git checkout main
+
+Then merge the feature branch:
+
+git merge branch-name
+
+Example:
+
+git merge feature-login
+
+
+========================
+    DELETE A BRANCH
+========================
+
+After merging, if the feature branch is no longer needed,
+we can delete it.
+
+git branch -d branch-name
+
+Example:
+
+git branch -d feature-login
+
+
+========================
+       MAIN IDEA
+========================
+
+Branch = Separate workspace
+
+Merge = Combine changes from branches
+
+Fast-forward merge =
+Main branch has no new changes.
+
+Three-way merge =
+Both branches have changes.
+
+Merge conflict =
+GiCreate Branch
+     ↓
+Work on Feature
+     ↓
+Commit Changes
+     ↓
+Switch to Main
+     ↓
+Merge Branch
+     ↓
+Resolve Conflict (if any)
+     ↓
+Delete Brancht cannot automatically combine the changes.
+
+Delete branch =
+Remove a branch after it is no longer needed.
