@@ -1,0 +1,193 @@
+# Git Merge, Branching and Merge Conflicts
+
+## 1. Git Merge Conflict
+
+A **merge conflict** happens when Git cannot automatically combine changes from two branches.
+
+This usually happens when the same part of a file has been changed differently in different branches.
+
+### Steps to Resolve a Merge Conflict
+
+1. Check the conflicted files:
+
+git status
+
+2. Open the conflicted file and resolve the conflict manually.
+
+Git shows conflicts like this:
+
+<<<<<<< HEAD
+Your current branch changes
+=======
+Changes from another branch
+>>>>>>> branch-name
+
+3. Remove the conflict markers and keep the correct code.
+
+4. Add the resolved file:
+
+git add <file-name>
+
+5. Complete the merge:
+
+git commit -m "Resolved merge conflict"
+
+---
+
+# Git Branching
+
+A **branch** allows you to work on new features without affecting the main branch.
+
+## Create a New Branch
+
+git branch branch-name
+
+## Switch to Another Branch
+
+git checkout branch-name
+
+Or:
+
+git switch branch-name
+
+## Create and Switch to a New Branch
+
+git checkout -b branch-name
+
+Or:
+
+git switch -c branch-name
+
+## Check Available Branches
+
+git branch
+
+The current branch is marked with:
+
+*
+
+---
+
+# Merging Branches
+
+To merge changes from another branch, first switch to the branch where you want the changes.
+
+Example:
+
+git checkout main
+
+Then merge the branch:
+
+git merge branch-name
+
+Example:
+
+git checkout main
+
+git merge feature-branch
+
+---
+
+# Fast-Forward Merge
+
+A **fast-forward merge** happens when the main branch has no new commits after the feature branch was created.
+
+Git simply moves the branch pointer forward.
+
+Example:
+
+main
+
+A --- B
+
+feature
+
+A --- B --- C --- D
+
+After merging:
+
+main
+
+A --- B --- C --- D
+
+---
+
+# Three-Way Merge
+
+A **three-way merge** happens when both branches have new commits.
+
+Git creates a new merge commit to combine the changes.
+
+Example:
+
+        C --- D
+       /         \
+A --- B           M
+       \         /
+        E --- F
+
+Here, `M` is the new merge commit.
+
+---
+
+# Useful Git Commands
+
+## Check Repository Status
+
+git status
+
+## View Commit History
+
+git log
+
+## View Short Commit History
+
+git log --oneline
+
+## View All Branches and Commit Graph
+
+git log --oneline --graph --all
+
+## Add Changes
+
+git add .
+
+## Commit Changes
+
+git commit -m "Your commit message"
+
+## Delete a Branch
+
+git branch -d branch-name
+
+## Force Delete a Branch
+
+git branch -D branch-name
+
+---
+
+# Important Points
+
+- Always check `git status` before merging.
+- Resolve merge conflicts manually if Git cannot merge automatically.
+- Use branches to develop features safely.
+- Merge completed features into the main branch.
+- Fast-forward merge does not create a separate merge commit.
+- Three-way merge usually creates a new merge commit.
+- After resolving conflicts, use `git add` and then `git commit`.
+
+# Basic Workflow
+
+git branch feature-branch
+
+git checkout feature-branch
+
+# Make changes
+
+git add .
+
+git commit -m "Added new feature"
+
+git checkout main
+
+git merge feature-branch
