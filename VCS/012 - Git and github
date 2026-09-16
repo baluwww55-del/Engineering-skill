@@ -1,0 +1,99 @@
+Git & GitHub - Remote Repository Notes
+
+## What is a Remote Repository?
+
+A remote repository is a repository hosted on a server such as GitHub.
+
+It allows us to store our code online and synchronize it with our local machine.
+
+Example:
+
+Local Repository <----> Remote Repository (GitHub)
+
+---
+
+## GitHub
+
+GitHub is a service that provides hosting for Git repositories.
+
+It allows developers to:
+- Store projects online
+- Collaborate with others
+- Push local code to a remote repository
+- Pull changes from a remote repository
+- Track project history
+
+---
+
+# Important Git Commands
+
+## 1. git clone
+
+`git clone` is used to copy an existing remote repository from GitHub to our local machine.
+
+```bash
+git clone <repository-url>
+Example:
+git clone https://github.com/username/project.git
+After cloning, a local copy of the GitHub repository is created.
+Important Point
+git clone copies the repository for the first time.
+2. git push
+git push is used to send our local commits to the remote repository.
+git push
+Example:
+git add .
+git commit -m "Added new program"
+git push
+Flow:
+Local Repository | | git push ↓ Remote Repository (GitHub)
+Meaning
+git push = Upload local commits to the remote repository.
+3. git pull
+git pull is used to download the latest changes from the remote repository and update the local repository.
+git pull
+Example:
+git pull origin main
+Flow:
+Remote Repository (GitHub) | | git pull ↓ Local Repository
+Meaning
+git pull = Get the latest changes from the remote repository.
+Clone vs Pull vs Push
+Command
+Purpose
+git clone
+Copy a remote repository to your computer
+git push
+Send local commits to GitHub
+git pull
+Get changes from GitHub to your local repository
+Working with a Remote Repository
+A common workflow is:
+git clone <repository-url>
+
+# Make changes to the project
+
+git add .
+
+git commit -m "Added changes"
+
+git push
+If someone else has made changes to the remote repository:
+git pull
+Then continue working on the project.
+Git Remote
+A remote is a connection between our local Git repository and a remote repository.
+The default remote name is usually:
+origin
+To see the remote repository:
+git remote -v
+Example output:
+origin  https://github.com/username/project.git (fetch)
+origin  https://github.com/username/project.git (push)
+Branch and Remote Push
+If we are working on a branch such as main, we can push it using:
+git push origin main
+Here:
+git push → send commits
+origin → remote repository
+main → branch
