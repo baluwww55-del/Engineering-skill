@@ -1,0 +1,60 @@
+operating system :
+operating system acts as bridge between computer and user to interact . 
+                      or 
+A software which is collection of multiple programs which helps us to interact with the computer easily 
+
+
+// syllabus of operating system :
+1) Introdcution 
+2) Process management 
+3) cpu and scheduling 
+4) threads and multithreading 
+5) process synchronization 
+6) memory management 
+7) virtual memory 
+6) file system 
+
+// services of operating system :
+1) user interface 
+2) program execution 
+3) communication 
+4) file management 
+5) I/O operations
+6) resource sharing 
+7) accounting 
+8) protection 
+
+
+// advantages of operating system :
+1) convieniency 
+2) efficiency 
+3) reliability 
+4) portability 
+5) scalibility 
+6) robustness 
+
+// parts of operating system :
+1) shell 
+2) kernel
+
+1) shell :
+--> a interface which abstracts the kernel and functionality of operating system (OS)
+
+2) kernel :
+--> which contains functionality of os to interact with the user and contains hardware of the operating system (OS)
+
+// interfaces :
+1) GUI
+2) CLI
+
+1) GUI : graphical user interface which is used to interact with the computer .
+2) CLI : command line interface which is used to interact with the kernel . 
+
+// Modes of the operating system :
+1) User mode 
+2) Dual mode 
+
+1) User mode : user mode has very non priviliged access means he cant access to the kernel and change the functionality of the operating system ( mode bit == 1 ) . 
+2) Dual mode : dual mode is the kernel mode which has access and it can be accessed by getting the priviliged access ( modebit == 0 ) .
+
+// dual mode is used to access protection and security . 
