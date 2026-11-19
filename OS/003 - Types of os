@@ -1,0 +1,56 @@
+Types of operating system :
+
+// there are majorly 7 types of operating system . 
+1) uni - operating system 
+2) mutli - programming operating system 
+3) multi - user operating system 
+4) mutli - tasking operating system 
+5) multi - process operating system 
+6) embed system operating system 
+7) real time operating sysem 
+8) hand held operating system 
+
+
+
+1) uni - programming operating system : 
+                  the operating system which allows only one process known as uni - programming operating system .
+
+
+
+2) multi - programming operating system :
+                  the operating system which allows more than one process known as multi - programming operating system . 
+*) preemptive : process can be forcefully stopped its execution .  
+*) non preemptive : process can be executed untill their wish .
+
+
+
+
+3) multi - tasking operating system : 
+                  the operatin system allows multiple operations known as multi - tasking operating system 
+                    eg : Round robin 
+
+
+
+4) mutli - user operating system : 
+                  the operating system which allows to use multiple user in one hardware is known as mutli - user operating system . 
+
+
+
+5) multi - process operating system :
+                  the operating system which allows multiple cpu on one process known as mutli - process operating system . 
+*) loosely coupled :( shares memory ) : multiple system shares memory known as loosely coupled operating system .
+*) tightly coupled : ( distrubuted system ) .
+
+
+6) embeded system operating system :
+                  operating system which is used in hardware like ac , mechanical or robotical car . 
+
+
+
+7) real time operating system : 
+                  used in ISRO and DRDO for to judge according to the environment .
+
+
+
+8) hand held device operating system : 
+                  which is used in the mobile devices known as hand held operating devices . 
