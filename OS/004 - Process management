@@ -1,0 +1,58 @@
+// Process management :
+            program under execution or smallest unit of a program 
+
+// process as data structure :
+
+      stack : local varibles and function parameters 
+        |
+        |
+      Heap : dynamic or run time memory allocations 
+        |
+      data section : public and static variables 
+        |
+      code section : set of instructions 
+
+// this is the basic representation of how process data has stored in the memory 
+
+// *) Heap and stack are not of fixed size so they have more space due to runtime or dynamic memory allocations 
+// *) each process has four steps stack,heap,datasection and codesection . 
+// assume we have two processor p1 and p2 p1 contains stack,heap,codesesction and datasection and p2 same as well 
+
+operations on a process 
+*) create 
+*) schedule 
+*) wait 
+*) suspend 
+*) block 
+
+// attributes of process :
+*) PID
+*) PC
+*) GPR
+*) LIST OF DEVICES 
+*) TYPE
+*) SIZE
+*) MEMORY UNITS 
+*) PRIORITY
+*) STATE 
+*) LIST OF FILES 
+
+// Operating system stores these process in PCB ( process control block )
+// also known as process descriptor . 
+
+// data is transfferred between cpu to os (pcb) through context switch . 
+q) so what is context switch ?
+-> stop running process and run anther process 
+
+*) context switch have two cases :
+1) context save .
+2) context load .
+
+ CPU------------------------------------>OS        1) CONTEXT SAVE 
+|  |        CONTEXT SWITCH               |         2) CONTEXT LOAD 
+PC GPR                                  PCB
+
+
+// THIS IS THE BASIC DIAGRAM HOW THE DATA IS WENT THROUGH CONTEXT SWITCH FROM CPU TO OS 
+
+// this is the basic introduction of process management . 
