@@ -1,0 +1,46 @@
+// process states 
+//         shows where and how the process is working inside operating system / main memory and shows at what state of the execution is process is in . 
+
+// process states : 
+1) preemptive 
+2) non premptive 
+
+1) preemptive : forcefully stopped processs 
+2) non preemptive : not forcefully stopped left to execute or run as much as wish 
+
+
+1) process state diagram as preemptive :
+new ------ ready ---- running -------terminated            // ready to running : interrupt 
+              |            |                               // running to ready : schedular dispatch 
+              waiting / blocked
+
+// new to ready : the process all installed and resources are allocated eg : memory or some data given to process to start its execution 
+// ready to running : the process is ready to run / execute or in ready state on cpu  to run 
+// running : process is running or executing 
+// termination : the process is terminated or exit / completed . 
+// waiting / block : the process is waiting for the I/O operations . 
+/// blocked to ready : all waiting process is ready to execute . 
+
+// running --- termination : done by the processor itself .
+// running ---  waiting / block : done by the processor itself .
+
+// new to ready : done by the operating system .
+// ready to running : done by the operating system .
+// blocked to ready : done by the operating systenm .
+// running to ready : (schedular dispatch ) done by the operating system .
+
+// process states of non preemptive :
+new ------ ready ---- running -------terminated         
+              |            |                              // running to ready : schedular dispatch 
+              waiting / blocked
+
+
+// CPU vs I/O bound :
+CPU : the processs is intensive in terms of the cpu operations .
+I/O : If the process is intensive in terms of the I/O operations .
+
+// q) the process which has just terminated but the process has to relinquish it resources it is called 
+--> zoombie process . 
+
+
+means : it has terminated but the resources are not fully deleted yet / deallocated 
