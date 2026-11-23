@@ -1,0 +1,60 @@
+// Schedulers :
+// shedulers is the state select which process should be needed to run in the main memory 
+
+// why we need schedulers 
+-> because better utilization 
+
+// there are three scheduling  queues :
+1) job queue   : which is new state to ready state .
+2) ready queue : which shows all the processes in ready state .
+3) device queue : all those processes which are waiting for the specific device .
+
+job queue --------> ready queue --------------> running 
+                                                    |
+                                                device queue 
+// basic block diagram of the scheduling queues . 
+
+// types of schedulerrs :
+1) long term schedulers
+2) short term schedulers 
+3) mid term schedulers 
+
+1) long  term schedulers :
+              the processses from new state to ready state 
+
+2) short term schedulers : 
+              it selects the ready procesess which is on cpu 
+
+3) mid term schedulers :
+              it allocates space to run application when there is no spaces by sending the inactive to the hardware using concept like swap out and swap in 
+
+// mid term schedular:
+       the schedulare allows the space to run application how ? let us understand 
+
+concept : suppose ww have 12 mb ram of space 3mb youtube 3mb game 3mb email and 3mb music and we have to run application called whatsapp to chat with someone 
+on that time the mid term schedular searches the inactive application and sends into the hardware space called ( SWAP SPACE ) . and after closing application 
+or going to again tht application called swap in . the when the swap out happens the process in waiting form due to inactive and it will be pushed on the secondary memoruy 
+and the process of that application will be in suspended state . 
+
+// there are two suspended state 
+1) suspended waiting / block 
+2) suspended ready 
+
+// after pushing the application in the secondary memory which in waiting  block we go for the process to run again it will come in suspended ready state 
+
+
+// update process state diagram :
+
+                    new 
+                                   termination 
+                      |              |
+suspended ready--- ready -------   running 
+       |                               |
+ suspended waiting----------------waiting/blocked 
+
+
+// this is the updated process state diagram . 
+
+
+// cpu scheduling :     
+                it is also known as short term scheduling which selects the processes to run on the cpu or secondary main memory . 
