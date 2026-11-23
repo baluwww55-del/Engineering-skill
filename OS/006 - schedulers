@@ -52,9 +52,18 @@ suspended ready--- ready -------   running
        |                               |
  suspended waiting----------------waiting/blocked 
 
-
 // this is the updated process state diagram . 
 
 
+goals of cpu scheduling :
+1) minimize wait time and turn around time . 
+2) maximmize cpu utilization . 
+3) fairness .
+
 // cpu scheduling :     
                 it is also known as short term scheduling which selects the processes to run on the cpu or secondary main memory . 
+
+// long term scheduler :
+                controls maximum degree of the mulitprogramming = no of process running in memoryh 
+
+// mid term schedular : reduces the degree of multiprogramming . 
