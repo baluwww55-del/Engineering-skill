@@ -1,0 +1,63 @@
+// Scheduling times :
+1) Arrival time 
+2) burst time 
+3) completion time 
+4) turnaround time 
+5) waiting time 
+6) response time 
+7) scheduling lenght
+8) throughput 
+
+1) Arrival time :
+        time which the process is arrived is known as arrival time 
+
+2) burst time :     
+          how much amount of a time process taken to run 
+
+3) completion time :
+              the time when the process end / complete its execution 
+
+4) turn around time :
+            total time by the process ends its execution from starting to ending 
+            ( TAT = CT - AT )
+
+5) waiting time : 
+            how much or waiting time means how much time the process is waited 
+            ( WT = TAT - BT ) 
+
+6) Response time :
+            in non preemptive the response time = waiting time 
+
+7) scheduling length :
+          (max)CT  -  (min)AT
+
+
+8) throughput :
+                   no of process
+                --------------------  = n/l
+                  scheduling length
+
+// CPU Scheduling :
+1) preemptive 
+2) non preemptive 
+
+1) Preemptive :
+          means the process which is taken out from its execution in cpu or send to some I/O operation forcefully . 
+
+2) non preemptive :
+          means the process which is not taken forcefully completed its execution until its wish or required time . 
+
+// algorithm :
+1) FCFS : first come first serve algorithm : non preemptive , we solve this is using gantt chart . 
+
+
+// convey effect :
+        only used in fcfs algorithm 
+        the effect describes how process can be taken more time when the it required less time to execute 
+
+//  concept :
+          when the process of large time is executing and the other process executes less time but behind the large time process so the 
+          speed process waiting time increase due to the first time process until its execution 
+
+NOTE : one process can be executed at one time . 
+
