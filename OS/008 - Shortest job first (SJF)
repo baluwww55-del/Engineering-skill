@@ -1,0 +1,16 @@
+SJF (shortest job first) :
+                criteria ( smallest burst time process sheduled ) first 
+                  tie breaker : FCFS 
+TYPE : NON PREEMPTIVE 
+
+
+we were checking the FCFS algorithms by arrival time .  
+we were checking burst time in this SJF  .
+
+algorithm for SJF :
+*) first we have to check the arrival time 
+*) from arriving we have to check the burst time by analysing the ready queue . 
+*) after analyzing all the process we have to allot all the process by ready queue . 
+
+// SJF came for convey effect faced by the fcfs algorithm to solve this scientist finded out the SJF algorithm . 
+
