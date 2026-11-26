@@ -1,0 +1,47 @@
+Highest response ratio next :
+object : Not only favors short job but decreases the waiting time of longer jobs 
+
+*) criteria : response time 
+*) type : non preemptive 
+RR = W + S / S response time = waiting burst time / burst time 
+
+RR is directly proportional to waiting time .
+RR is indirectly proportional to the burst time .
+
+// priority based scheduling :
+*) criteria : priority 
+tie breaker : FCFS 
+type : 1) preemptive 
+      2) non - preemptive 
+
+priority can be two types :
+1) static 
+2) dynamic 
+
+// static : means fixed priority of the process .
+// dynamic : means increased or decreased priority of the processes .
+
+if there is no new processes no forceful preemption 
+
+*) prermptive happens when there is a new process in arrival time and it happens only in SRTF and PBS two scheduling types and happens only when the new process is arrived 
+
+by this startvation happens :
+
+// starvation : higher priority keep arriving and lower priority process keep waiting till undefinite time 
+
+// solution for starvation :  Aging 
+
+// Aging : 
+      after predefined time period increase priority of all waiting processes by one . 
+
+
+// PBS (priority based scehduling) and HRRN (highest response ratio next)
+
+
+
+
+
+
+
+
+//;
