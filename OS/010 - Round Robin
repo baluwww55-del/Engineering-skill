@@ -1,0 +1,30 @@
+// Round Robin :
+
+// a method of cycling through a group of items, tasks, or participants in a fair, sequential order, repeating the cycle as needed . 
+
+
+let us understand as a cricket anology :
+ *) in a particular four players are playing a game they play one by one that is known as round robin 
+// like one player gets out another player has taken forcefully 
+
+
+
+// so the round robin works on the preemtive sheduling 
+// round robin used in the mutlitasking systems . 
+
+advantages of round robin : 
+          *) because of the interactiveness btw the processes .  
+          *) It gives fairness .
+
+
+round robin :
+criteria : arrival time 
+tie breaker : process ID 
+type : preemptive 
+
+// advance of round robin 
+1) fairness .
+2) interactiveness for time sharing .
+3) burst time of any processes should not be known priority .
+
+// this is the anology of round robin and all the example of algorithm based on the cpu scheduling will be given in an seperated file . 
